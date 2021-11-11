@@ -1,0 +1,257 @@
+/*Font Faces*/
+@font-face 
+    {
+        font-family: 'Anton';
+        src: url('Anton-Regular.eot');
+        src: url('Anton-Regular.eot?#iefix') format('embedded-opentype'),
+            url('Anton-Regular.woff2') format('woff2'),
+            url('Anton-Regular.woff') format('woff'),
+            url('Anton-Regular.ttf') format('truetype'),
+            url('Anton-Regular.svg#Anton-Regular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+@font-face 
+    {
+        font-family: 'Playfair Display';
+        src: url('PlayfairDisplay-Regular.eot');
+        src: url('PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+             url('PlayfairDisplay-Regular.woff2') format('woff2'),
+             url('PlayfairDisplay-Regular.woff') format('woff'),
+             url('PlayfairDisplay-Regular.ttf') format('truetype'),
+             url('PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+/*********************************************************************
+**********************************************************************
+    Name : Mohit verma;
+    Student Id : 0777694;
+    Date : 24-05-2021;
+    Assignment : Accordian and Tabs;
+
+    Color-guide
+    ***********
+    #c0c0c0 - grey
+    #ef7777 - light red
+    #fdfd96 - light yellow
+    #89cff0 - light blue
+    rgb(0,0,0) - black
+
+    Typography Guide
+    ****************
+    h1 - 'Anton', sans-serif - 100px
+    h2 - 'Anton', sans-serif - 40px
+    paragraphs - 'Playfair Display', serif - 30px
+    footer - 'New Century Schoolbook', serif - 30px
+
+    Table of Contents
+    *****************
+    1. Body Style
+    2. Header Style
+    3. Accordion Style
+    4. Tabs Style
+    5. Main Style
+    6. Column Style
+    7. Footer Style
+
+**********************************************************************
+*********************************************************************/
+
+/****************************************************
+1. Body Style
+****************************************************/
+*
+    {
+        margin:0;
+        padding:0;
+    }
+
+/****************************************************
+2. header Style
+****************************************************/
+header 
+    {
+        font-family: 'Anton', sans-serif;
+        background-color: #c0c0c0;
+        color: black;
+        padding: 10px;
+        text-align: center;
+        font-size: 50px;
+    }
+
+/****************************************************
+3. Accordion Style
+****************************************************/
+ul.accordion{
+    list-style-type: none;
+    padding-left: 0;
+}
+.accordion-control{
+    display: block;
+    text-align: center;
+    color: #000;
+    background-color:#ffc0cb;
+    border: 1px solid #000;
+    border-bottom: 0;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+.accordion-control:hover{
+    text-decoration: underline;
+}
+li:last-child .accordion-control{
+    border-bottom: 1px solid #000;
+}
+li:last-child .accordion-control.active{
+    border-bottom: 0px;
+}
+.accordion-panel{
+    display: none;
+    border: 1px solid #000;
+    border-top: 0;
+    border-bottom:0;
+    padding: 16px;
+}
+li:last-child .accordion-panel{
+    border-bottom: 1px solid #000;
+}
+
+/****************************************************
+4. Tabs Style
+****************************************************/
+.tab {
+    clear: both;
+}
+.tab-list{
+    list-style-type: none;
+    padding: 0px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 10;
+}
+.tab-list li{
+    display: inline-block;
+    width: 100px;
+}
+.tab-list li a{
+    display: block;
+    text-align: center;
+    background-color: #c0c0c0;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+}
+.tab-list li.active a{
+    color: #fff;
+    border-bottom: 1px solid darkseagreen;
+}
+
+
+.tab-panel {
+    display: none;
+    padding: 16px;
+    border: 1px solid #000;
+    margin-top: -1px;
+    position: relative;
+    z-index: 1;
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+}
+.tab-panel.active {
+    display: block;
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+}
+.tab-control {
+    font-size: 30px;
+}
+/****************************************************
+5. Main Style
+****************************************************/
+main section:nth-of-type(1) 
+    {
+        background: #ef7777;
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+        text-align: justify;
+        box-sizing: border-box;
+        padding: 10px;
+        font-style: italic;
+    }
+main section:nth-of-type(2)
+    {
+        background: #fdfd96;
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+        text-align: justify;
+        box-sizing: border-box;
+        padding: 10px;
+        font-style: italic;
+    }
+main section:nth-of-type(3)
+    {
+        background: #89cff0;
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+        text-align: justify;
+        box-sizing: border-box;
+        padding: 20px;
+        font-style: italic;
+    }
+p {
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+}
+/****************************************************
+6. Column Style
+****************************************************/
+body>section
+    {
+        width: 2040px;
+        margin: 0 auto;
+    }
+main
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+main section
+    {
+        width: 1000px; 
+    }
+
+/****************************************************
+7. Footer Style
+****************************************************/
+footer
+    {
+        text-align: center;
+        padding: 10px;
+        background: rgb(0,0,0);
+        color: white;
+        font-family: 'New Century Schoolbook', serif;
+        clear: both;
+        font-size: 30px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
